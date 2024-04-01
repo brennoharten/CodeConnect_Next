@@ -3,11 +3,6 @@
 		"env": {
 			"DATABASE_URL": "postgresql://postgres@localhost:5432/codeconnect_dev"
 		},
-		"functions": {
-			"api/**/*.js": {
-				"memory": 1024
-			}
-		},
 		"commands": {
 			"migrate": "npm run migrate",
 			"seed": "npm run seed",
