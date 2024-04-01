@@ -1,0 +1,21 @@
+{
+	"build": {
+		"env": {
+			"DATABASE_URL": "postgresql://postgres@localhost:5432/codeconnect_dev"
+		},
+		"functions": {
+			"api/**/*.js": {
+				"memory": 1024
+			}
+		},
+		"commands": {
+			"migrate": "npm run migrate",
+			"seed": "npm run seed",
+			"generate": "npm run generate",
+			"build:prisma": "npm run build:prisma"
+		},
+		"hooks": {
+			"postbuild": "npm run build:prisma"
+		}
+	}
+}

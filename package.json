@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma migrate dev && prisma generate && prisma db seed && next build",
+    "build": "next build",
+    "migrate": "prisma migrate dev",
+    "seed": "prisma db seed",
+    "generate": "prisma generate",
+    "build:prisma": "npm run generate && npm run migrate && npm run seed",
     "start": "next start",
     "lint": "next lint"
   },
